@@ -1,0 +1,46 @@
+﻿
+# ==== Visual Studio & .NET ====
+/Api/bin/
+/Api/obj/
+/Api/.vs/
+/.vs/
+/Api/appsettings.Development.json
+/Api/appsettings.Production.json
+
+
+# User-specific files
+*.user
+*.suo
+
+# ==== Entity Framework Migrations Logs ====
+/Api/Migrations/*.Designer.cs
+/Api/Migrations/*.resx
+
+# ==== Node / React ====
+/ClientApp/node_modules/
+/ClientApp/build/
+/ClientApp/dist/
+/ClientApp/.next/
+
+# Env files (local secrets)
+/ClientApp/.env
+/ClientApp/.env.local
+/ClientApp/.env.development
+/ClientApp/.env.production
+/ClientApp/.env.test
+
+# ==== Logs ====
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==== OS / IDE ====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ==== Coverage / Test ====
+/ClientApp/coverage/
+/Api/TestResults/
