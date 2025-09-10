@@ -56,5 +56,5 @@ A full-stack product catalog application built with:
 
 - DB -> Azure SQL Database
 
-\- Images -> Azure Blob Storage
+- Images -> Azure Blob Storage
 
