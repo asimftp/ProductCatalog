@@ -1,60 +1,60 @@
-\# Product Catalog (ASP.NET Core + React + Azure)
+# Product Catalog (ASP.NET Core + React + Azure)
 
 
 
 A full-stack product catalog application built with:
 
-\- ASP.NET Core Web API (CRUD + Azure Blob integration)
+- ASP.NET Core Web API (CRUD + Azure Blob integration)
 
-\- React (TypeScript + React Router)
+- React (TypeScript + React Router)
 
-\- SQL Server (EF Core for migrations)
+- SQL Server (EF Core for migrations)
 
-\- Azure Blob Storage for image upload
-
-
-
-\## Features
-
-\- Product CRUD with image upload
-
-\- Categories dropdown
-
-\- Azure Blob storage integration
-
-\- Error handling \& logging
-
-\- Uniform API response format
+- Azure Blob Storage for image upload
 
 
 
-\## Project Structure
+## Features
 
-\- /Api -> ASP.NET Core API
+- Product CRUD with image upload
 
-\- /ClientApp -> React frontend
+- Categories dropdown
 
-\- /DbScripts -> EF migrations \& SQL scripts
+- Azure Blob storage integration
 
+- Error handling \& logging
 
-
-\## Run locally
-
-1\. Setup database using EF Core migrations.
-
-2\. Start API: dotnet run from /Api
-
-3\. Start frontend: npm install \&\& npm start from /ClientApp
+- Uniform API response format
 
 
 
-\## Deployment
+## Project Structure
 
-\- API -> Azure App Service
+- /Api -> ASP.NET Core API
 
-\- Frontend -> Azure Static Web Apps
+- /ClientApp -> React frontend
 
-\- DB -> Azure SQL Database
+- /DbScripts -> EF migrations \& SQL scripts
+
+
+
+## Run locally
+
+1. Setup database using EF Core migrations.
+
+2. Start API: dotnet run from /Api
+
+3. Start frontend: npm install \&\& npm start from /ClientApp
+
+
+
+## Deployment
+
+- API -> Azure App Service
+
+- Frontend -> Azure Static Web Apps
+
+- DB -> Azure SQL Database
 
 \- Images -> Azure Blob Storage
 
