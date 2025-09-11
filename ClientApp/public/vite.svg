@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="32" height="32">
+  <!-- Bag body (scaled down by ~25% and centered lower) -->
+  <path d="M14 30 C14 24 19 20 25 20 H41 C47 20 52 24 52 30 V55 C52 61 47 65 41 65 H25 C19 65 14 61 14 55 Z"
+        fill="#0b0b0b" stroke="#0b0b0b"/>
+  
+  <!-- Handle (moved higher above bag for visibility) -->
+  <path d="M20 26 C20 6 27 2 32 2 C37 2 44 6 44 26"
+        fill="none" stroke="#ff0000" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- White stripes inside bag -->
+  <path d="M20 37 H44" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M20 45 H44" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
