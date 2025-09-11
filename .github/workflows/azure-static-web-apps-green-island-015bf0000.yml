@@ -7,6 +7,8 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'ClientApp/**'
     types: [synchronize]  # trigger only PR update 
 
 jobs:
@@ -51,4 +53,5 @@ jobs:
           app_location: "./ClientApp"
           api_location: ""           # API already App Service me hai
           output_location: "dist"    # Vite build output
+
           github_id_token: ${{ steps.idtoken.outputs.result }}
