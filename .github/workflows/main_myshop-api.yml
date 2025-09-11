@@ -9,6 +9,8 @@ on:
       - main
     paths:
       - 'Api/**'
+    paths-ignore:
+      - 'ClientApp/**'
   workflow_dispatch:
 
 jobs:
@@ -64,4 +66,5 @@ jobs:
           app-name: 'myshop-api'
           slot-name: 'Production'
           package: .
+
 
