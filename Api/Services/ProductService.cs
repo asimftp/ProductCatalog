@@ -45,7 +45,7 @@ namespace ProductCatalogApi.Services
             {
                 if (string.IsNullOrEmpty(product.ImagePath)) continue;
 
-                string blobPath = product.ImagePath; //url = container-name/1.png
+                string blobPath = product.ImagePath; //url = container-name/1.jpg
                 //Fetch sasUrl (Shared Access Signature URL)
                 var response = await _azure.GetSasUrlAsync(blobPath);
                 //Replace in DTO
