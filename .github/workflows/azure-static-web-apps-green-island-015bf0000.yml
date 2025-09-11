@@ -4,19 +4,10 @@ on:
   push:
     branches:
       - main       # only main branch push par deploy
-    paths:
-      - 'ClientApp/**'
-    paths-ignore:
-      - 'Api/**'
-
   pull_request:
     branches:
       - main
-    paths:
-      - 'ClientApp/**'
-    paths-ignore:
-      - 'Api/**'
-    types: [synchronize]  # trigger only PR update
+    types: [synchronize]  # trigger only PR update 
 
 jobs:
   build_and_deploy_job:
@@ -60,6 +51,4 @@ jobs:
           app_location: "./ClientApp"
           api_location: ""           # API already App Service me hai
           output_location: "dist"    # Vite build output
-
           github_id_token: ${{ steps.idtoken.outputs.result }}
-
