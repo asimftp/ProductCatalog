@@ -17,13 +17,16 @@ export const getCategories = async (): Promise<Category[]> => {
 };
 
 export const getProducts = async (): Promise<Product[]> => {
-
     try {
         console.log("ApiBaseUrl:", ApiBaseUrl);
         const response = await axios.get<Product[]>(`${API_BASE}/product`);
         return response.data;
-    } catch (error) {
+    } catch (error: unknown) {
         console.error("Error fetching products:", error);
+        if (axios.isAxiosError(error)) {
+            console.error("Error fetching products:", error.message);
+            throw new Error(error.message);
+        }
         return [];
     }
 };
