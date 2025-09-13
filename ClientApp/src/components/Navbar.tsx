@@ -29,16 +29,17 @@ export const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto"> {/* 🔹 Bootstrap 5 uses "me-auto" instead of "mr-auto" */}
                     <li className="nav-item active">
-                        <NavLink className="nav-link" to="/">
+                        <NavLink className="nav-link ps-3" to="/">
                             Home <span className="sr-only"></span>
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/AddProduct">Add Product</NavLink>
+                        <NavLink className="nav-link ps-3" to="/AddProduct">
+                            Add Product
+                        </NavLink>
                     </li>
                 </ul>
             </div>
         </nav>
-
     )
 }
