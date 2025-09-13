@@ -27,7 +27,7 @@ export const getProducts = async (): Promise<Product[]> => {
             console.error("Error fetching products:", error.message);
             throw new Error(error.message);
         }
-        return [];
+        throw new Error("An unexpected error occurred while fetching products.");
     }
 };
 
