@@ -21,6 +21,7 @@ export const Home = () => {
             setError("Getting things ready for you… just a moment.");
             setTimeout(() => {
                 setError(null);
+                window.location.reload();
                 console.clear();
             }, 50000);
         } finally {
