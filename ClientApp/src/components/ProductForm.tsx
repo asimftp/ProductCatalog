@@ -15,7 +15,7 @@ export function ProductForm({ initialProduct, title, buttonText, onSubmit }: Pro
             productId: 0,
             name: '',
             categoryId: 0,
-            price: 0,   
+            price: 0,
             description: '',
             file: undefined
         }
@@ -34,8 +34,8 @@ export function ProductForm({ initialProduct, title, buttonText, onSubmit }: Pro
         }));
     };
 
-    const handleFileChange = (e: ChangeEvent<HTMLInputElement>) =>{
-        if(e.target.files && e.target.files.length > 0){
+    const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files && e.target.files.length > 0) {
             setProduct((prevProduct) => ({
                 ...prevProduct,
                 file: e.target.files![0]
@@ -50,7 +50,7 @@ export function ProductForm({ initialProduct, title, buttonText, onSubmit }: Pro
     return (
         <div className="container my-5">
             <div className="row justify-content-center">
-                <div className="col-5 mx-auto">
+                <div className="col-12 col-md-8 col-lg-6">
                     <div className="card shadow-sm">
                         <div className="card-body">
                             <h3 className="card-title mb-4">{title}</h3>
@@ -77,14 +77,14 @@ export function ProductForm({ initialProduct, title, buttonText, onSubmit }: Pro
                                 </div>
 
                                 <div className="row g-3 mb-3">
-                                    <div className="col-sm-6">
+                                    <div className="col-12 col-sm-6">
                                         <label className="form-label fw-medium">Price</label>
                                         <div className="input-group">
                                             <span className="input-group-text">₹</span>
                                             <input
                                                 type="number"
                                                 name="price"
-                                                value={product.price}
+                                                value={product.price === 0 ? '' : product.price} // to show placeholder when 0
                                                 onChange={handleChange}
                                                 className="form-control form-control-lg"
                                                 placeholder="0.00"
@@ -94,7 +94,7 @@ export function ProductForm({ initialProduct, title, buttonText, onSubmit }: Pro
                                         </div>
                                     </div>
 
-                                    <div className="col-sm-6">
+                                    <div className="col-12 col-sm-6">
                                         <label className="form-label fw-medium">Category</label>
                                         <CategoryDropdown
                                             value={product.categoryId}
@@ -114,8 +114,8 @@ export function ProductForm({ initialProduct, title, buttonText, onSubmit }: Pro
                                     />
                                 </div>
 
-                                <div className="d-flex justify-content-end">
-                                    <button type="submit" className="btn btn-primary btn-lg">{buttonText}</button>
+                                <div className="d-flex justify-content-center justify-content-md-end">
+                                    <button type="submit" className="btn btn-primary btn-lg w-100 w-md-auto">{buttonText}</button>
                                 </div>
                             </form>
                         </div>
@@ -125,5 +125,3 @@ export function ProductForm({ initialProduct, title, buttonText, onSubmit }: Pro
         </div>
     );
 }
-
-//export { ProductForm };
